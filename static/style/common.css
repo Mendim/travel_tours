@@ -1,0 +1,54 @@
+body {
+	font-family: arial;
+}
+
+
+.lang {
+	margin:0;
+	padding: 0;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+
+
+.lang li {
+	float: left;
+	list-style-type: none;
+
+}
+
+
+
+nav {
+	margin:0;
+	padding-top: 10px;
+	position: absolute;
+	left: 50px;
+	top: 0px;
+}
+
+
+nav li {
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+	border: 1px 1px 0px solid;
+
+}
+
+#content {
+	margin-top: 64px;
+
+
+}
+
+
+footer {
+	border-top: 1px solid;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 10px;
+	margin-right: 100px;
+	margin-left: 100px;
+	text-align: center;
+}
