@@ -44,13 +44,25 @@
         </a>
     </div>
 
-    <div class="container">
-        <p>
-            Who we are?
-            What we offer
-            Brief description
-        </p>
+      <div class="container">
+    <div class="row">
+        <div class="col-lg-6 text-center">
+            <h2>Who we are</h2>
+            <p class="text-danger">
+                Some description here
+            </p>
+            <a class="btn btn-primary" href="#" role="button">View details »</a>
+         </div>
+        <div class="col-lg-6  text-center">
+            <h2>What we offer</h2>
+            <p class="text-danger">
+                Some description here
+            </p>
+            <a class="btn btn-primary" href="#" role="button">View details »</a>
+        </div>
     </div>
+          <hr />
+      </div>
 	<?php $this->load->view('footer_view');  ?>
 </body>
 
