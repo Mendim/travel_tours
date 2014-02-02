@@ -10,13 +10,14 @@ class MY_Controller extends CI_Controller {
     
     public function checkLang() 
     {
+
 		$selectedLang = $this->session->userdata('language');
-		if(!isset($selectedLang)) 
+		if(!isset($selectedLang))
 		{
 			$selectedLang = $this->config->item('language');
-		} 
+		}
+		$this->lang->load('common', $selectedLang);
 
-		$this->lang->load('common', $selectedLang); 
     }
 
 
@@ -26,8 +27,8 @@ class MY_Controller extends CI_Controller {
         {
             $this->session->set_userdata("language", $selectedLang);
         }
-
-        $this->load->view('home/welcome');
+        redirect("home")    ;
+//        $this->load->view('home/welcome');
     }
 
 }

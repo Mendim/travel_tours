@@ -32,8 +32,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('home_langs')?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><?php echo lang('home_langs_en')?></a></li>
-                                <li><a href="#"><?php echo lang('home_langs_ru')?></a></li>
+                                <li><a href="home/setLang?language=en"><?php echo lang('home_langs_en')?></a></li>
+                                <li><a href="home/setLang?language=ru"><?php echo lang('home_langs_ru')?></a></li>
                             </ul>
                         </li>
                     </ul>
