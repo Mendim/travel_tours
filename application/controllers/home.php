@@ -24,7 +24,7 @@ class Home extends CI_Controller {
 		$selectedLang = $this->input->get('language');
 		if(!isset($lang)) 
 		{
-			$lang = "english";
+			$lang = "en";
 		} 
 
 		$this->lang->load('common', $lang); 
