@@ -20,14 +20,27 @@ class Home extends CI_Controller {
  	 */ 
 	private function checkLang() 
 	{
-		$selectedLang = $this->input->post('language');
-		if(!isset($selectedLang)) 
+		$lang = $this->session->userdata('language');
+		$selectedLang = $this->input->get('language');
+		if(!isset($lang)) 
 		{
-			$selectedLang = "english";
+			$lang = "english";
 		} 
 
-		$this->lang->load('common', $selectedLang); 
+		$this->lang->load('common', $lang); 
 
+	}
+
+
+	public function changeLang() 
+	{
+		$selectedLang = $this->input->post('language');
+                if(isset($selectedLang))        
+                {
+			$this->session->set_userdata("language", $selectedLang);
+                }
+
+		$this->load->view('home/welcome');
 	}
 
 } 
