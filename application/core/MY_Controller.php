@@ -20,7 +20,7 @@ class MY_Controller extends CI_Controller {
     }
 
 
-    public void setLang() {
+    public function  setLang() {
         $selectedLang = $this->input->get('language');
         if(isset($selectedLang))        
         {

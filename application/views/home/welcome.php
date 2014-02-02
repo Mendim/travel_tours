@@ -44,7 +44,13 @@
         </a>
     </div>
 
-
+    <div class="container">
+        <p>
+            Who we are?
+            What we offer
+            Brief description
+        </p>
+    </div>
 	<?php $this->load->view('footer_view');  ?>
 </body>
 
