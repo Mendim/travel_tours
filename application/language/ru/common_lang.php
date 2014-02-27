@@ -5,7 +5,7 @@ $lang['home_igt'] = "Экскурсионный тур с гидом по Ирл
 $lang['home_offers'] = "Предложения";
 $lang['home_ireland'] = "Ирландия";
 $lang['home_contact_us'] = "О нас";
-$lang['home_langs'] = "Languages";
+$lang['home_langs'] = "Выбрать язык";
 $lang['home_langs_ru'] = "Русский";
 $lang['home_langs_en'] = "Английский";
 
