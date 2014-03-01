@@ -8,10 +8,11 @@ class User_model extends CI_Model {
 	var $phone = "";
 	var $spoken_language = "";
 	var $is_admin = 0;
+    var $firstname= "";
+    var $lastname = "";
 
 	function __construct() {
 		parent::__construct();
-		$this->load->database();
 	}
 
 	function create($email, $password, $phone) {
@@ -20,7 +21,7 @@ class User_model extends CI_Model {
 		$this->phone = $phone;
 		$this->spoken_language = "en";
 		$this->is_admin = 0;
-		$this->db->insert($TABLE_NAME, $this);
+		$this->db->insert(User_model::TABLE_NAME, $this);
 	}
 
 	function update($email, $password, $phone, $spoken_language, $is_admin) {
@@ -30,12 +31,12 @@ class User_model extends CI_Model {
                 $this->spoken_language = $spoken_language;
                 $this->is_admin = $is_admin;
 	
-		$this->db->update(TABLE_NAME, $this);
+		$this->db->update(User_model::TABLE_NAME, $this);
 	}
 
 	function findById($email) {
-		$this->db->where('email', $email);
-		return $this->db->get();
+		$result = $this->db->where('email', $email)->get(User_model::TABLE_NAME)->result_array();
+        return (count($result) > 0 ? $result[0] : NULL);
 	}
 
 	function findAll($first, $last) {
@@ -43,7 +44,7 @@ class User_model extends CI_Model {
 	}
 	
 	function deleteById($email) {
-		$this->db->delete($TABLE_NAME, array('email' => $email)); 
+		$this->db->delete(User_model::TABLE_NAME, array('email' => $email));
 	}	
 
 
