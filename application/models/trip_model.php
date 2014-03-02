@@ -1,10 +1,12 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class TripModel extends CI_Model {
 
-	const $TABLE_NAME = "trip";
+	const TABLE_NAME = "trip";
 
 	var $id = "";
 	var $description = "";
-	var $icon = "":
+	var $icon = "";
 	var $price = "";
 	var $duration = "";
 	var $last_edit = "";
@@ -19,7 +21,7 @@ class TripModel extends CI_Model {
 		$this->price = $price;
 		$this->duration = $duration;
 		$this->last_edit = new Date();
-		$this->db->insert($TABLE_NAME, $this);
+		$this->db->insert(TripModel::TABLE_NAME, $this);
 	}
 
 	function update($description, $icon, $price, $duration) {
@@ -29,7 +31,7 @@ class TripModel extends CI_Model {
 		$this->duration = $duration;
 		$this->last_edit = new Date();
 	
-		$this->db->update(TABLE_NAME, $this);
+		$this->db->update(TripModel::TABLE_NAME, $this);
 	}
 
 	function findById($id) {
@@ -42,7 +44,7 @@ class TripModel extends CI_Model {
 	}
 	
 	function deleteById($id) {
-		$this->db->delete($TABLE_NAME, array('id' => $id)); 
+		$this->db->delete(TripModel::$TABLE_NAME, array('id' => $id));
 	}	
 
 

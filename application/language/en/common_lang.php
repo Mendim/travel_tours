@@ -9,4 +9,10 @@ $lang['home_langs'] = "Languages";
 $lang['home_langs_ru'] = "Russian";
 $lang['home_langs_en'] = "English";
 
+$lang['create'] = "Create";
+$lang['title'] = "Title";
+$lang['save'] = "Save";
+$lang['cancel'] = "Cancel";
+$lang['duration'] = "Duration";
+
 

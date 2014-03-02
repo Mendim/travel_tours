@@ -10,8 +10,8 @@ class Home extends MY_Controller {
 
     public function index()
     {
-        //$data["title"] = "Title test";
-        $this->load->view('home/welcome');
+//        $data["title"] = "Title test";
+        $this->loadView('home/welcome');
     }
 
 } 

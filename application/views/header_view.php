@@ -29,6 +29,9 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+                        <?php if(isset($email_user)) { ?>
+                        <li><a href="<?php echo site_url('user/logout'); ?>"><?php echo $email_user ?></a></li>
+                        <?php } ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('home_langs')?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">

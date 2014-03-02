@@ -52,7 +52,6 @@
                 </div>
             </form>
         </div>
-        <hr/>
         <div class="col-xs-12 col-sm-6">
             <h2>Login</h2>
             <?php if($login_has_error == 1) { ?>

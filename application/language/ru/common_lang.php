@@ -9,4 +9,7 @@ $lang['home_langs'] = "Выбрать язык";
 $lang['home_langs_ru'] = "Русский";
 $lang['home_langs_en'] = "Английский";
 
+//TODO
+$lang['create'] = "Create";
+
 
