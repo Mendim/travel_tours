@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class offer extends MY_Controller {
+class offers extends MY_Controller {
 
     public function __construct() {
         parent::__construct();

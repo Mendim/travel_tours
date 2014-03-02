@@ -9,11 +9,11 @@
 <div class="container">
     <div class="row-fluid">
         <div class="col-xs-12 col-sm-6">
-            <h2>Register Now!</h2>
+            <h2><?php echo lang('register_now')?></h2>
             <?php if($register_has_error == 1) { ?>
                 <div class="alert alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>Warning!</strong> <?php echo validation_errors(); ?>
+                    <strong><?php echo lang('warning')?></strong> <?php echo validation_errors(); ?>
                 </div>
             <?php } ?>
             <?php if(isset($register_success)) { ?>
@@ -24,30 +24,30 @@
             <?php } ?>
             <form class="form-horizontal" action="<?php echo site_url('user/auth');?>" method="post">
                 <div class="control-group">
-                    <label class="control-label" for="email">Email</label>
+                    <label class="control-label" for="email"><?php echo lang('email')?></label>
 
                     <div class="controls">
-                        <input type="text" name="email" id="email" placeholder="Email">
+                        <input type="text" name="email" id="email" placeholder="<?php echo lang('email')?>">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="password">Password</label>
+                    <label class="control-label" for="password"><?php echo lang('pwd')?></label>
 
                     <div class="controls">
-                        <input type="password" name="password" id="password" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="<?php echo lang('pwd')?>">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="passconf">Repeat Password</label>
+                    <label class="control-label" for="passconf"><?php echo lang('repeat_pwd')?></label>
 
                     <div class="controls">
-                        <input type="password" name="passconf" id="passconf" placeholder="Password">
+                        <input type="password" name="passconf" id="passconf" placeholder="<?php echo lang('pwd')?>">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <input type="hidden" id="scenario" name="scenario" value="register"/>
-                        <button type="submit" class="btn">Sign up</button>
+                        <button type="submit" class="btn"><?php echo lang('signup')?></button>
                     </div>
                 </div>
             </form>
@@ -57,32 +57,29 @@
             <?php if($login_has_error == 1) { ?>
             <div class="alert alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Warning!</strong> <?php echo $auth_error; ?>
+                <strong><?php echo lang('warning')?></strong> <?php echo $auth_error; ?>
             </div>
             <?php } ?>
 
             <form class="form-horizontal" action="<?php echo site_url('user/auth');?>" method="post">
                 <div class="control-group">
-                    <label class="control-label" for="auth_mail">Email</label>
+                    <label class="control-label" for="auth_mail"><?php echo lang('email')?></label>
 
                     <div class="controls">
-                        <input type="text" name="auth_mail" id="auth_mail" placeholder="Email">
+                        <input type="text" name="auth_mail" id="auth_mail" placeholder="<?php echo lang('email')?>">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="auth_password">Password</label>
+                    <label class="control-label" for="auth_password"><?php echo lang('pwd')?></label>
 
                     <div class="controls">
-                        <input type="password" name="auth_password" id="auth_password" placeholder="Password">
+                        <input type="password" name="auth_password" id="auth_password" placeholder="<?php echo lang('pwd')?>">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <label class="checkbox">
-                            <input type="checkbox"> Remember me
-                        </label>
                         <input type="hidden" id="scenario" name="scenario" value="auth"/>
-                        <button type="submit" class="btn">Login</button>
+                        <button type="submit" class="btn"><?php echo lang('login')?></button>
                     </div>
                 </div>
             </form>

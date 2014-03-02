@@ -1,7 +1,7 @@
 <footer>
     <div class="row">
         <p class="text-center">
-            Copyright &copy; <?php echo date('Y'); ?> by Irish Guided Tours.<br/>All Rights Reserved.<br/>
+            <?php echo lang('copyright')?>
         </p>
     </div>
 </footer>

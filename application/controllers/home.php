@@ -14,4 +14,9 @@ class Home extends MY_Controller {
         $this->loadView('home/welcome');
     }
 
+    public function contact()
+    {
+        $this->loadView('home/contact');
+    }
+
 } 

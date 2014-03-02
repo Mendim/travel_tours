@@ -47,18 +47,18 @@
       <div class="container">
     <div class="row">
         <div class="col-lg-6 text-center">
-            <h2>Who we are</h2>
-            <p class="text-danger">
-                Some description here
+            <h2><?php echo lang('who_we_are')?></h2>
+            <p class="text-info">
+                <?php echo lang('who_we_are_desc')?>
             </p>
-            <a class="btn btn-primary" href="#" role="button">View details »</a>
+            <a class="btn btn-primary" href="<?php echo site_url('/home/contact/') ?>" role="button"><?php echo lang('who_we_are_details')?></a>
          </div>
         <div class="col-lg-6  text-center">
-            <h2>What we offer</h2>
-            <p class="text-danger">
-                Some description here
+            <h2><?php echo lang('what_we_offer')?></h2>
+            <p class="text-info">
+                <?php echo lang('what_we_offer_desc')?>
             </p>
-            <a class="btn btn-primary" href="#" role="button">View details »</a>
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/')?>" role="button"><?php echo lang('what_we_offer_details')?></a>
         </div>
     </div>
           <hr />
