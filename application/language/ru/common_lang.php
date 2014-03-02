@@ -33,3 +33,9 @@ $lang['repeat-pwd'] = "Repeat Password";
 $lang['signup'] = "Sign up";
 $lang['login'] = "Login";
 $lang['signin'] = "Sign in";
+
+$lang['contact_name'] = "Зайцев Эрик";
+$lang["contact_hrs"] = "Заявки принимаются по телефонам";
+$lang["contact_details"] = "Понедельник-Пятница: 9.00-18.00";
+$lang["contact_mob"] = "Моб: +353876441033";
+$lang["contact_office"] = "Офис: +353429386950";

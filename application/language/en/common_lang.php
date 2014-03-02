@@ -34,4 +34,10 @@ $lang['signup'] = "Sign up";
 $lang['login'] = "Login";
 $lang['signin'] = "Sign in";
 
+$lang['contact_name'] = "Eric Zaitsev";
+$lang["contact_hrs"] = "Contact Hours:";
+$lang["contact_details"] = "Monday-Friday: 9am - 6pm";
+$lang["contact_mob"] = "Mob: +353876441033";
+$lang["contact_office"] = "Office: +353429386950";
+
 
