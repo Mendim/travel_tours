@@ -16,7 +16,7 @@ class offers extends MY_Controller {
        $this->loadView("offer/list");
     }
 
-    public function detail($id) {
+    public function details($id) {
 
     }
 

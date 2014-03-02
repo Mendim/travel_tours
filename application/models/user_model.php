@@ -46,7 +46,11 @@ class User_model extends CI_Model {
 	
 	function deleteById($email) {
 		$this->db->delete(User_model::TABLE_NAME, array('email' => $email));
-	}	
+	}
 
+    function isAdmin($email) {
+        $result = $this->db->where('email', $email)->where('is_admin', 1)->get(User_model::TABLE_NAME)->result_array();
+        return (count($result) > 0 ? true : false);
+    }
 
 }
