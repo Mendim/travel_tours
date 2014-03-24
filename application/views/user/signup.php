@@ -19,7 +19,7 @@
             <?php if(isset($register_success)) { ?>
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>Congragulation!</strong> <?php echo $register_success; ?>
+                    <strong><?php echo lang('congrats')?></strong> <?php echo $register_success; ?>
                 </div>
             <?php } ?>
             <form class="form-horizontal" action="<?php echo site_url('user/auth');?>" method="post">
@@ -28,6 +28,27 @@
 
                     <div class="controls">
                         <input type="text" name="email" id="email" placeholder="<?php echo lang('email')?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="firstname"><?php echo lang('firstname')?></label>
+
+                    <div class="controls">
+                        <input type="text" name="firstname" id="firstname" placeholder="<?php echo lang('firstname')?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="lastname"><?php echo lang('lastname')?></label>
+
+                    <div class="controls">
+                        <input type="text" name="lastname" id="lastname" placeholder="<?php echo lang('lastname')?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="phone"><?php echo lang('phone')?></label>
+
+                    <div class="controls">
+                        <input type="text" name="phone" id="phone" placeholder="<?php echo lang('phone')?>">
                     </div>
                 </div>
                 <div class="control-group">

@@ -33,6 +33,11 @@ $lang['repeat-pwd'] = "Repeat Password";
 $lang['signup'] = "Sign up";
 $lang['login'] = "Login";
 $lang['signin'] = "Sign in";
+$lang['firstname'] = "First Name" ;
+$lang['lastname'] = "Last Name";
+$lang['phone'] = "Phone number";
+
+
 
 $lang['contact_name'] = "Eric Zaitsev";
 $lang["contact_hrs"] = "Contact Hours:";
