@@ -14,6 +14,9 @@ $lang['title'] = "Title";
 $lang['save'] = "Save";
 $lang['cancel'] = "Cancel";
 $lang['duration'] = "Duration";
+$lang['price'] = "Price";
+$lang['image'] = "Image";
+$lang['description'] = "Description";
 
 
 $lang['who_we_are'] = "Who we are";

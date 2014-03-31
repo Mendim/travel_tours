@@ -37,6 +37,16 @@ class MY_Controller extends CI_Controller {
         redirect("home");
     }
 
+    protected function getLang() {
+		$selectedLang = $this->session->userdata('language');
+		if(!isset($selectedLang))
+		{
+			$selectedLang = $this->config->item('language');
+        }
+        return $selectedLang;
+    
+    }
+
     protected function setData($key, $value) {
         $this->data[$key] = $value;
     }

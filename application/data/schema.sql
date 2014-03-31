@@ -13,13 +13,17 @@ CREATE TABLE user (
 DROP TABLE TRIP;
 
 CREATE TABLE trip (
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name varchar(50),
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+	name varchar(50) NOT NULL,
 	duration varchar(10),
+	price decimal,
+	last_edit DATETIME,
 	description text,
 	image varchar(255),
-	lang varchar(20)
-)
+	lang varchar(20),
+    author VARCHAR(255),
+    CONSTRAINT fk_authorId FOREIGN KEY (author) REFERENCES user(email)
+);
 
 DROP TABLE BOOKING;
 

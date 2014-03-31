@@ -12,13 +12,14 @@
     </div>
 
     <?php foreach($trips as $trip) {?>
+        <?php var_dump($trip) ?>
         <div class="media">
             <a href="#" class="pull-left">
                 <img class="media-object" data-src="holder.js/300x200" alt="trip-icon">
             </a>
             <div class="media-body">
                 <p>
-
+                    <?= $trip->description ?>
 
 
                 </p>
