@@ -22,9 +22,9 @@
 
 
         <div class="control-group">
-            <label class="control-label" for="title"><?php echo lang('title'); ?></label>
+            <label class="control-label" for="name"><?php echo lang('title'); ?></label>
             <div class="controls">
-            <input class="form-control" type="text" id="title" name="title" placeholder="<?php echo lang('title'); ?>" value="<?php echo set_value('title'); ?>">
+            <input class="form-control" type="text" id="name" name="name" placeholder="<?php echo lang('title'); ?>" value="<?php echo set_value('title'); ?>">
             </div>
         </div>
         <div class="control-group">
@@ -59,23 +59,27 @@
 
 <?php $this->load->view('footer_view'); ?>
 <script type="text/javascript">
-$('#desc-editor').wysihtml5(
-    {
-    "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
-    "emphasis": true, //Italics, bold, etc. Default true
-    "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-    "html": false, //Button which allows you to edit the generated HTML. Default false
-    "link": true, //Button to insert a link. Default true
-    "image": true, //Button to insert an image. Default true,
-    "color": false //Button to change color of font  
-    }
-);
+//$('#desc-editor').wysihtml5(
+//    {
+//    "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+//    "emphasis": true, //Italics, bold, etc. Default true
+//    "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+//    "html": false, //Button which allows you to edit the generated HTML. Default false
+//    "link": true, //Button to insert a link. Default true
+//    "image": true, //Button to insert an image. Default true,
+//    "color": false //Button to change color of font  
+//    }
+//);
     function updateTextInput(val) {
         document.getElementById('textInput').value=val; 
     }
 
-var editor = $('#desc-editor').wysihtml5().data("wysihtml5").editor;
-editor.setValue("<?php echo set_value('description');?>");
+$(function(){
+    $('#desc-editor').editable({inlineMode: false, imageUploadURL: '<?php echo site_url('offers/upload');?>'})
+});
+
+//var editor = $('#desc-editor').wysihtml5().data("wysihtml5").editor;
+//editor.setValue("<?php echo set_value('description');?>");
 
 </script>
 </body>

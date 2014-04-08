@@ -37,7 +37,8 @@ class Trip_model extends CI_Model {
 	}
 
 	function findAll($first, $last) {
-		return $this->db->limit($first, $last)->get(Trip_model::TABLE_NAME)->result();
+        return $this->db->get(Trip_model::TABLE_NAME)->result();
+        //return $this->db->limit($first, $last)->get(Trip_model::TABLE_NAME)->result();
 	}
 	
 	function deleteById($id) {
