@@ -48,4 +48,7 @@ $lang["contact_details"] = "Monday-Friday: 9am - 6pm";
 $lang["contact_mob"] = "Mob: +353876441033";
 $lang["contact_office"] = "Office: +353429386950";
 
+$lang["duration_hours"]= "Hours";
+  $lang["duration_days"]= "Days";
+
 

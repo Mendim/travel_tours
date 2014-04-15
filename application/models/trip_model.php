@@ -18,22 +18,24 @@ class Trip_model extends CI_Model {
 		parent::__construct();
 	}
 
-    function create($id=NULL, $name, $description, $image, $price, $duration, $author, $lang) {
+    function create($id=NULL, $name, $description, $image, $duration, $author, $lang) {
         $this->id = $id;
         $this->name = $name;
 		$this->description = $description;
 		$this->image = $image;
-		$this->price = $price;
+		$this->price = 0;
 		$this->duration = $duration;
         $this->last_edit = getdate();
         $this->author = $author;
+        $this->lang = $lang;
 		return $id == NULL ? $this->db->insert(Trip_model::TABLE_NAME, $this) : $this->db->update(Trip_model::TABLE_NAME, $this);
 	}
 
 
 	function findById($id) {
 		$this->db->where('id', $id);
-		return $this->db->get();
+        $resArray = $this->db->get(Trip_model::TABLE_NAME)->result();
+		return empty($resArray) ? null : $resArray[0];
 	}
 
 	function findAll($first, $last) {

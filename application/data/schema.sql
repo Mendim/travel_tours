@@ -21,6 +21,7 @@ CREATE TABLE trip (
 	description text,
 	image varchar(255),
 	lang varchar(20),
+	map_url varchar(255),
     author VARCHAR(255),
     CONSTRAINT fk_authorId FOREIGN KEY (author) REFERENCES user(email)
 );

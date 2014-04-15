@@ -23,14 +23,15 @@ class offers extends MY_Controller {
     }
 
     public function details($id) {
-
+        $this->setData("trip", $this->trip_model->findById($id));
+        $this->loadView("offer/detailed");
     }
 
     public function create($id=NULL) {
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('duration', 'Duration', 'required');
         $this->form_validation->set_rules('description', 'Description', 'required');
-        $this->form_validation->set_rules('price', 'Price', 'required|integer|greater_than[0]');
+//        $this->form_validation->set_rules('price', 'Price', 'required|integer|greater_than[0]');
 
 
         if($this->form_validation->run() == FALSE) {
@@ -47,7 +48,7 @@ class offers extends MY_Controller {
                     $this->input->post('name'), 
                     $this->input->post('description'), 
                     $this->input->post('image'), 
-                    $this->input->post('price'), 
+//                    $this->input->post('price'),
                     $this->input->post('duration'),
                     $this->data["email_user"],
                     $this->getLang());
