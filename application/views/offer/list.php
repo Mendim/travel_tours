@@ -35,10 +35,13 @@
 
     <br/>
 
+    <?php if ($is_admin){ ?>
+        <div class="btn-group">
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/create/') ?>"><?php echo lang('create_offer') ?></a>
+        </div>
+    <?php }?>
 
-    <div class="btn-group">
-        <a class="btn btn-primary" href="<?php echo site_url('/offers/create/') ?>"><?php echo lang('create') ?></a>
-    </div>
+
 
 </div>
 

@@ -28,8 +28,15 @@ class Trip_model extends CI_Model {
         $this->last_edit = getdate();
         $this->author = $author;
         $this->lang = $lang;
-		return $id == NULL ? $this->db->insert(Trip_model::TABLE_NAME, $this) : $this->db->update(Trip_model::TABLE_NAME, $this);
+		return $id == NULL ? $this->db->insert(Trip_model::TABLE_NAME, $this) : $this->updateData();
 	}
+
+    function updateData() {
+        $idToUpdate = $this->id;
+        unset($this->id);
+        $this->db->where('id', $idToUpdate);
+        $this->db->update(Trip_model::TABLE_NAME ,$this);
+    }
 
 
 	function findById($id) {

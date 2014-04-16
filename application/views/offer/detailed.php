@@ -23,6 +23,13 @@
     <?= $trip->description ?>
     </p>
 
+    <?php if ($is_admin){ ?>
+        <div class="btn-group">
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/create/'. $trip->id) ?>"><?php echo lang('update_offer') ?></a>
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/delete/'. $trip->id) ?>"><?php echo lang('delete_offer') ?></a>
+        </div>
+    <?php }?>
+
 </div>
 
 <?php $this->load->view('footer_view'); ?>

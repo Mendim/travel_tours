@@ -46,6 +46,7 @@ class User extends MY_Controller
         $this->session->unset_userdata('login_state');
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('display_name');
+        $this->session->unset_userdata('is_admin');
         redirect("home");
     }
 
@@ -103,6 +104,7 @@ class User extends MY_Controller
             if (isset($user["password"]) && $user["password"] === md5($password)) {
                 $this->session->set_userdata('login_state', TRUE);
                 $this->session->set_userdata('email', $user["email"]);
+                $this->session->set_userdata('is_admin', $user["is_admin"]);
                 $this->session->set_userdata('display_name', $user["firstname"] . " " . $user["lastname"]);
                 redirect("home");
             } else {

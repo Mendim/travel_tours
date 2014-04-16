@@ -5,6 +5,8 @@
 </head>
 <body>
 <?php $this->load->view('header_view'); ?>
+<?php if ($is_admin){ ?>
+
 
 <div class="container">
      <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="<?php echo site_url('offers/create');?>">
@@ -26,7 +28,8 @@
         <div class="control-group">
             <label class="control-label" for="name"><?php echo lang('title'); ?></label>
             <div class="controls">
-            <input class="form-control" type="text" id="name" name="name" placeholder="<?php echo lang('title'); ?>" value="<?php echo set_value('title'); ?>">
+             <input type="hidden" id="id" name="id" value="<?= $trip->id ?>">
+            <input class="form-control" type="text" id="name" name="name" placeholder="<?php echo lang('title'); ?>" value="<?php echo set_value('title', $trip->name); ?>">
             </div>
         </div>
 
@@ -35,7 +38,7 @@
          <div class="row">
              <div class="col-lg-6">
                  <div class="input-group">
-                     <input type="text" class="form-control" id="duration" name="duration" min="4" max="16" placeholder="<?php echo lang('duration'); ?>" value="<?php echo set_value('duration'); ?>">
+                     <input type="text" class="form-control" id="duration" name="duration" min="4" max="16" placeholder="<?php echo lang('duration'); ?>" value="<?php echo set_value('duration',  $trip->duration); ?>">
                      <div class="input-group-btn">
                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><?php echo lang('duration_hours'); ?><span class="caret"></span></button>
                          <ul class="dropdown-menu pull-right">
@@ -66,7 +69,7 @@
         <div>
             <label class="control-label" for="desc-editor"><?php echo lang('description'); ?></label>
             <div class="controls">
-                <textarea class="form-control" name="description" id="desc-editor" rows="10" value="<?php echo set_value('description'); ?>"></textarea>
+                <textarea class="form-control" name="description" id="desc-editor" rows="10"><?php echo set_value('description', $trip->description); ?></textarea>
             </div>
         </div>
 
@@ -76,20 +79,10 @@
     </form>
 
 </div>
+<?php }?>
 
 <?php $this->load->view('footer_view'); ?>
 <script type="text/javascript">
-//$('#desc-editor').wysihtml5(
-//    {
-//    "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
-//    "emphasis": true, //Italics, bold, etc. Default true
-//    "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-//    "html": false, //Button which allows you to edit the generated HTML. Default false
-//    "link": true, //Button to insert a link. Default true
-//    "image": true, //Button to insert an image. Default true,
-//    "color": false //Button to change color of font  
-//    }
-//);
     function updateTextInput(val) {
         document.getElementById('textInput').value=val; 
     }
@@ -98,8 +91,6 @@ $(function(){
     $('#desc-editor').editable({inlineMode: false, imageUploadURL: '<?php echo site_url('offers/upload');?>'})
 });
 
-//var editor = $('#desc-editor').wysihtml5().data("wysihtml5").editor;
-//editor.setValue("<?php echo set_value('description');?>");
 
 </script>
 </body>

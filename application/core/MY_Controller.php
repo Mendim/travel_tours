@@ -12,6 +12,8 @@ class MY_Controller extends CI_Controller {
         if(isset($emailUser)) {
             $this->data["email_user"] = $emailUser;
         }
+        $isAdmin = $this->session->userdata('is_admin');
+        $this->data["is_admin"] = isset($isAdmin) ? $isAdmin : false;
 
     }
     

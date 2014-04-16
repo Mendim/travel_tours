@@ -9,7 +9,9 @@ $lang['home_langs'] = "Languages";
 $lang['home_langs_ru'] = "Русский";
 $lang['home_langs_en'] = "English";
 
-$lang['create'] = "Create";
+$lang['create_offer'] = "Create New Offer";
+$lang['update_offer'] = "Update Offer";
+$lang['delete_offer'] = "Delete";
 $lang['title'] = "Title";
 $lang['save'] = "Save";
 $lang['cancel'] = "Cancel";
