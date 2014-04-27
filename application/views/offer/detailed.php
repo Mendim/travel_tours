@@ -18,10 +18,25 @@
         <dt><?= $trip->duration?></dt>
     </dl>
 
+    <dl>
+        <dd>price</dd>
+        <dt><?= $trip->price?></dt>
+    </dl>
+
 
     <p>
     <?= $trip->description ?>
     </p>
+
+    <?php if(!empty($email_user)) { ?>
+        <div class="btn-group">
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/book/'. $trip->id) ?>"><?php echo lang('book_offer') ?></a>
+        </div>
+    <?php } else {    ?>
+        <div class="btn-group">
+            <a class="btn btn-primary" href="<?php echo site_url('/user/auth/'. $trip->id) ?>"><?php echo lang('signin_book') ?></a>
+        </div>
+    <?php }?>
 
     <?php if ($is_admin){ ?>
         <div class="btn-group">

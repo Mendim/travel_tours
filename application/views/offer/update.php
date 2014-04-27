@@ -59,13 +59,13 @@
          </div>
 
 
-<!--        <div class="control-group">-->
-<!--            <label class="control-label" for="price">--><?php //echo lang('price'); ?><!--</label>-->
-<!--            <div class="controls input-group">-->
-<!--                <span class="input-group-addon">€</span>-->
-<!--                <input class="form-control" type="number" id="price" name="price" placeholder="--><?php //echo lang('price'); ?><!--" value="--><?php //echo set_value('price'); ?><!--">-->
-<!--            </div>-->
-<!--        </div>-->
+        <div class="control-group">
+            <label class="control-label" for="price"><?php echo lang('price'); ?></label>
+            <div class="controls input-group">
+                <span class="input-group-addon">€</span>
+               <input class="form-control" type="number" id="price" name="price" placeholder="<?php echo lang('price'); ?>" value="<?php echo set_value('price',  $trip->price); ?>">
+            </div>
+        </div>
         <div>
             <label class="control-label" for="desc-editor"><?php echo lang('description'); ?></label>
             <div class="controls">

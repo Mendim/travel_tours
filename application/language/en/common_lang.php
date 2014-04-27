@@ -52,5 +52,7 @@ $lang["contact_office"] = "Office: +353429386950";
 
 $lang["duration_hours"]= "Hours";
   $lang["duration_days"]= "Days";
+$lang["book_offer"]= "Book this offer";
+$lang["signin_book"]= "You need to login before booking";
 
 

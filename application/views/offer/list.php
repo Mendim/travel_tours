@@ -24,9 +24,8 @@
             </div>
             <div class="panel-body">
                 <p>
-                    <?= $trip->description ?>
-
-
+                    <?= preg_replace('/<[^>]*>/', '',substr($trip->description, 0,100));?>
+                    <!--<?= preg_replace('/<[^>]*>/', '',substr($trip->description, 0,100)) ?>-->
                 </p>
             </div>
         </div>

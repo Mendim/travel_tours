@@ -18,12 +18,12 @@ class Trip_model extends CI_Model {
 		parent::__construct();
 	}
 
-    function create($id=NULL, $name, $description, $image, $duration, $author, $lang) {
+    function create($id=NULL, $name, $description, $image, $price, $duration, $author, $lang) {
         $this->id = $id;
         $this->name = $name;
 		$this->description = $description;
 		$this->image = $image;
-		$this->price = 0;
+		$this->price = $price;
 		$this->duration = $duration;
         $this->last_edit = getdate();
         $this->author = $author;
