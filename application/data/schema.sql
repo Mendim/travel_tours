@@ -29,11 +29,15 @@ CREATE TABLE trip (
 DROP TABLE BOOKING;
 
 CREATE TABLE booking (
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
 	start_date datetime NOT NULL,
-	end_date datime NOT NULL,
+	end_date datetime NOT NULL,
 	meeting_point varchar(255),
 	comment varchar(255),
 	trip_id INTEGER ,
-	CONSTRAINT fk_TripId FOREIGN KEY (trip_id) REFERENCES trip(id)
-)
+	number_of_persons INTEGER,
+	lang varchar(20),
+	main_contact VARCHAR(255),
+	CONSTRAINT fk_tripId FOREIGN KEY (trip_id) REFERENCES trip(id),
+    CONSTRAINT fk_mainContactId FOREIGN KEY (main_contact) REFERENCES user(email)
+) ;

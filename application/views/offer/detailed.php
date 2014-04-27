@@ -30,7 +30,7 @@
 
     <?php if(!empty($email_user)) { ?>
         <div class="btn-group">
-            <a class="btn btn-primary" href="<?php echo site_url('/offers/book/'. $trip->id) ?>"><?php echo lang('book_offer') ?></a>
+            <a class="btn btn-primary" href="<?php echo site_url('/booking/form/'. $trip->id) ?>"><?php echo lang('book_offer') ?></a>
         </div>
     <?php } else {    ?>
         <div class="btn-group">
