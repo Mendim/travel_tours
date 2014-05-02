@@ -7,15 +7,38 @@ class booking extends MY_Controller
     {
         parent::__construct();
         $this->load->model('booking_model');
+        $this->load->model('trip_model');
         $this->load->library('form_validation');
         $this->load->helper(array('form', 'url'));
     }
 
 
+    public function prepare($id)
+    {
+        if (!$this->data["email_user"]) {
+            redirect("user/auth");
+            return;
+        }
+        if(isset($id)) {
+            $this->setData("tomorrow",date('Y-m-d H:i:s', mktime(0, 0, 9, date("m")  , date("d")+1, date("Y"))));
+            //$this->setData("tomorrow",date_format($tomorrow, "Y-m-dTH:i:s:Z"));
+            $this->setData("trip", $this->trip_model->findById($id));
+            $booking = new Booking_model();
+            $booking->trip_id = $id;
+            $this->setData("booking", $booking);
+            $this->setData("lang", $this->getLang());
+            $this->loadView("booking/form");
+        }
+
+        else{
+            redirect("offers/");
+        }
+    }
+
 
     public function send($id = NULL)
     {
-        if (!$this->data["email"]) {
+        if (!$this->data["email_user"]) {
             $this->output->set_status_header('401');
             redirect("user/auth");
             return;

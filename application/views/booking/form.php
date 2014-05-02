@@ -5,13 +5,13 @@
 </head>
 <body>
 <?php $this->load->view('header_view'); ?>
-<?php if ($is_admin){ ?>
 
+<h2><?= $trip->name ?></h2>
 
 <div class="container">
      <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="<?php echo site_url('booking/send');?>">
         <div class="btn-group">
-            <a class="btn btn-primary" href="<?php echo site_url('/offers/') ?>"><?php echo lang('cancel') ?></a>
+            <a class="btn btn-primary" href="<?php echo site_url('/offers/details/' . $trip->id) ?>"><?php echo lang('cancel') ?></a>
         </div>
 
         <div class="control-group">&nbsp;</div>
@@ -26,52 +26,38 @@
 
 
         <div class="control-group">
-            <label class="control-label" for="name"><?php echo lang('title'); ?></label>
-            <div class="controls">
-             <input type="hidden" id="id" name="id" value="<?= $trip->id ?>">
-            <input class="form-control" type="text" id="name" name="name" placeholder="<?php echo lang('title'); ?>" value="<?php echo set_value('title', $trip->name); ?>">
+            <label class="control-label" for="start_date"><?php echo lang('start_date'); ?></label> (<i><?= lang('duration')?>: <?=$trip->duration ?></i>)
+            <div class="input-group date form_datetime col-md-5" data-date="<?= $tomorrow?>" data-date-format="yyyy-MM-dd HH:ii:ss" data-link-field="start_date">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
             </div>
-        </div>
-
-         </br>
-
-         <div class="row">
-             <div class="col-lg-6">
-                 <div class="input-group">
-                     <input type="text" class="form-control" id="duration" name="duration" min="4" max="16" placeholder="<?php echo lang('duration'); ?>" value="<?php echo set_value('duration',  $trip->duration); ?>">
-                     <div class="input-group-btn">
-                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><?php echo lang('duration_hours'); ?><span class="caret"></span></button>
-                         <ul class="dropdown-menu pull-right">
-                             <li><a href="#"><?php echo lang('duration_hours'); ?></a></li>
-                             <li><a href="#"><?php echo lang('duration_days'); ?></a></li>
-                         </ul>
-                     </div>
-                 </div>
-             </div>
-<!--             <div class="col-lg-6">-->
-<!--                 <div class="control-group">-->
-<!--                     <label class="control-label" for="image">--><?php //echo lang('image'); ?><!--</label>-->
-<!--                     <div class="controls">-->
-<!--                         <input type="file" id="image" name="image" placeholder="--><?php //echo lang('image'); ?><!--" value="--><?php //echo set_value('image'); ?><!--">-->
-<!--                     </div>-->
-<!--                 </div>-->
-<!--             </div>-->
+            <input type="hidden" id="start_date" name="start_date" value="<?php echo set_value('start_date', $booking->start_date); ?>">
          </div>
 
 
-        <div class="control-group">
-            <label class="control-label" for="price"><?php echo lang('price'); ?></label>
-            <div class="controls input-group">
-                <span class="input-group-addon">€</span>
-               <input class="form-control" type="number" id="price" name="price" placeholder="<?php echo lang('price'); ?>" value="<?php echo set_value('price',  $trip->price); ?>">
-            </div>
-        </div>
-        <div>
-            <label class="control-label" for="desc-editor"><?php echo lang('description'); ?></label>
-            <div class="controls">
-                <textarea class="form-control" name="description" id="desc-editor" rows="10"><?php echo set_value('description', $trip->description); ?></textarea>
-            </div>
-        </div>
+         <div class="control-group">
+             <label class="control-label" for="meeting_point"><?php echo lang('meeting_point'); ?></label>
+             <div class="controls">
+                 <input type="hidden" id="id" name="id" value="<?= $booking->trip_id ?>">
+                 <input class="form-control" type="text" id="meeting_point" name="meeting_point" placeholder="<?php echo lang('meeting_point'); ?>" value="<?php echo set_value('meeting_point', $booking->meeting_point); ?>">
+             </div>
+         </div>
+
+
+         <div class="control-group">
+             <label class="control-label" for="number_of_persons"><?php echo lang('number_of_persons'); ?></label>
+             <div class="controls">
+                 <input class="form-control" type="text" id="number_of_persons" name="number_of_persons" placeholder="<?php echo lang('number_of_persons'); ?>" value="<?php echo set_value('number_of_persons', $booking->number_of_persons); ?>">
+             </div>
+         </div>
+
+         <div class="control-group">
+             <label class="control-label" for="comment"><?php echo lang('comment'); ?></label>
+             <div class="controls">
+                 <textarea class="form-control" name="comment" id="comment" rows="10"><?php echo set_value('comment', $booking->comment); ?></textarea>
+             </div>
+         </div>
 
          <div class="btn-group">
              <button type="submit" class="btn"><?php echo lang('save') ?></button>
@@ -79,18 +65,19 @@
     </form>
 
 </div>
-<?php }?>
+
 
 <?php $this->load->view('footer_view'); ?>
 <script type="text/javascript">
-    function updateTextInput(val) {
-        document.getElementById('textInput').value=val; 
-    }
-
-$(function(){
-    $('#desc-editor').editable({inlineMode: false, imageUploadURL: '<?php echo site_url('offers/upload');?>'})
-});
-
-
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
 </script>
 </body>

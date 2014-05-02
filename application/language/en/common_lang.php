@@ -56,3 +56,9 @@ $lang["book_offer"]= "Book this offer";
 $lang["signin_book"]= "You need to login before booking";
 
 
+
+$lang["start_date"] = "Starting Date";
+$lang["meeting_point"] = "Desired Meeting Point";
+$lang["number_of_persons"] = "Number of persons";
+$lang["comment"] = "Any Comments?";
+

@@ -11,5 +11,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/bootstrap-wysihtml5.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/froala_editor.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>static/css/common.css">
 

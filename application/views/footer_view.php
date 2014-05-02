@@ -12,4 +12,5 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/wysihtml5-0.3.0.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/bootstrap-wysihtml5.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/froala_editor.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/bootstrap-datetimepicker.min.js"></script>
 
