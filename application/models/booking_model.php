@@ -29,7 +29,8 @@ class Booking_model extends CI_Model {
         $this->number_of_persons = $number_of_persons;
         $this->main_contact = $main_contact;
         $this->lang = $lang;
-		return $id == NULL ? $this->db->insert(Booking_model::TABLE_NAME, $this) : $this->updateData();
+		$this->db->insert(Booking_model::TABLE_NAME, $this);
+        return $this->db->insert_id();
 	}
 
     function updateData() {

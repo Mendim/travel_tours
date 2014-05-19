@@ -39,7 +39,7 @@
          <div class="control-group">
              <label class="control-label" for="meeting_point"><?php echo lang('meeting_point'); ?></label>
              <div class="controls">
-                 <input type="hidden" id="id" name="id" value="<?= $booking->trip_id ?>">
+                 <input type="hidden" id="trip_id" name="trip_id" value="<?= $booking->trip_id ?>">
                  <input class="form-control" type="text" id="meeting_point" name="meeting_point" placeholder="<?php echo lang('meeting_point'); ?>" value="<?php echo set_value('meeting_point', $booking->meeting_point); ?>">
              </div>
          </div>
