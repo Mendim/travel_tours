@@ -9,12 +9,16 @@ $lang['home_langs'] = "Выбрать язык";
 $lang['home_langs_ru'] = "Русский";
 $lang['home_langs_en'] = "English";
 
-$lang['create'] = "Create";
-$lang['title'] = "Title";
-$lang['save'] = "Save";
-$lang['cancel'] = "Cancel";
-$lang['duration'] = "Duration";
-
+$lang['create_offer'] = "Создать предложение";
+$lang['update_offer'] = "Редактировать предложение";
+$lang['delete_offer'] = "Удалить";
+$lang['title'] = "Название";
+$lang['save'] = "Сохранить";
+$lang['cancel'] = "Отменить";
+$lang['duration'] = "Продолжительность";
+$lang['price'] = "Стоимость";
+$lang['image'] = "Изображение";
+$lang['description'] = "Полное описание тура";
 
 $lang['who_we_are'] = "Кто мы";
 $lang['what_we_offer'] = "Что мы предлагаем";
@@ -24,19 +28,18 @@ $lang['who_we_are_details'] = "О нас »";
 $lang['what_we_offer_details'] = "Наши услуги »";
 $lang['copyright'] = "Copyright &copy; 2014 by Irish Guided Tours.<br/>All Rights Reserved.<br/>";
 
-$lang['register_now'] = "Register Now!";
-$lang['warning'] = "Warning!";
-$lang['congrats'] = "Congratulations!";
-$lang['email'] = "Email";
-$lang['pwd'] = "Password";
-$lang['repeat-pwd'] = "Repeat Password";
-$lang['signup'] = "Sign up";
-$lang['login'] = "Login";
-$lang['signin'] = "Sign in";
-$lang['firstname'] = "First Name" ;
-$lang['lastname'] = "Last Name";
-$lang['phone'] = "Phone number";
-
+$lang['register_now'] = "Регистрация";
+$lang['warning'] = "Внимание!";
+$lang['congrats'] = "Поздравляем!";
+$lang['email'] = "Эл. почта";
+$lang['pwd'] = "Пароль";
+$lang['repeat-pwd'] = "Повторите парольd";
+$lang['signup'] = "Регистрация";
+$lang['login'] = "Логин";
+$lang['signin'] = "Войти";
+$lang['firstname'] = "Имя" ;
+$lang['lastname'] = "Фамилия";
+$lang['phone'] = "Номер телефона";
 
 
 $lang['contact_name'] = "Зайцев Эрик";
@@ -44,3 +47,15 @@ $lang["contact_hrs"] = "Заявки принимаются по телефон�
 $lang["contact_details"] = "Понедельник-Пятница: 9.00-18.00";
 $lang["contact_mob"] = "Моб: +353876441033";
 $lang["contact_office"] = "Офис: +353429386950";
+
+$lang["duration_hours"]= "Часы";
+$lang["duration_days"]= "Дни";
+$lang["book_offer"]= "Забронировать предложение";
+$lang["signin_book"]= "Вам нужно залогиниться прежде чем забронировать";
+
+
+
+$lang["start_date"] = "Желаемая дата отправления";
+$lang["meeting_point"] = "Желаемое место встречи";
+$lang["number_of_persons"] = "Количество людей";
+$lang["comment"] = "Дополнительные пожелания?";

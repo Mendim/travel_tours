@@ -96,7 +96,7 @@ class offers extends MY_Controller
             return;
         }
         // Allowed extentions.
-        $allowedExts = array("gif", "jpeg", "jpg", "png");
+        $allowedExts = array("gif", "jpeg", "jpg", "png", "GIF", "JPEG", "JPG", "PNG");
 
         // Get filename.
         $temp = explode(".", $_FILES["file"]["name"]);

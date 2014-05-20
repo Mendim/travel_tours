@@ -74,7 +74,7 @@
             </form>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <h2>Login</h2>
+            <h2><?php echo lang('login')?></h2>
             <?php if($login_has_error == 1) { ?>
             <div class="alert alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>

@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="<?php echo site_url('/offers/') ?>"><?php echo lang('home_offers')?></a></li>
-                        <li><a href="<?php echo site_url('/home/ireland/') ?>"><?php echo lang('home_ireland')?></a></li>
+                        <!--<li><a href="<?php echo site_url('/home/ireland/') ?>"><?php echo lang('home_ireland')?></a></li> -->
                         <li><a href="<?php echo site_url('/home/contact/') ?>"><?php echo lang('home_contact_us')?></a></li>
                     </ul>
 
