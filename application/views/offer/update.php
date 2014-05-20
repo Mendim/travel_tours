@@ -66,6 +66,18 @@
                <input class="form-control" type="number" id="price" name="price" placeholder="<?php echo lang('price'); ?>" value="<?php echo set_value('price',  $trip->price); ?>">
             </div>
         </div>
+
+         <label class="control-label" for="price"><?php echo lang('tour_lang'); ?></label>
+         <div class="btn-group" data-toggle="buttons" >
+             <label class="btn btn-primary">
+                 <input type="radio" name="tour_lang" id="tour_lang" value="ru"><?php echo lang('home_langs_ru'); ?>
+             </label>
+             <label class="btn btn-primary">
+                 <input type="radio" name="tour_lang" id="tour_lang" value="en"><?php echo lang('home_langs_en'); ?>
+             </label>
+         </div>
+
+
         <div>
             <label class="control-label" for="desc-editor"><?php echo lang('description'); ?></label>
             <div class="controls">

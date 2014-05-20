@@ -20,7 +20,7 @@ class offers extends MY_Controller
 
     public function index($first = 0, $last = 10)
     {
-        $this->setData("trips", $this->trip_model->findAll($first, $last));
+        $this->setData("trips", $this->trip_model->findAll($first, $last, $this->getLang()));
         $this->loadView("offer/list");
     }
 
@@ -57,6 +57,7 @@ class offers extends MY_Controller
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('duration', 'Duration', 'required');
         $this->form_validation->set_rules('description', 'Description', 'required');
+        $this->form_validation->set_rules('tour_lang', 'Language', 'required');
         $this->form_validation->set_rules('price', 'Price', 'required|integer|greater_than[0]');
 
 
@@ -73,7 +74,7 @@ class offers extends MY_Controller
                 $this->input->post('price'),
                 $this->input->post('duration'),
                 $this->data["email_user"],
-                $this->getLang());
+                $this->input->post('tour_lang'));
             redirect("offers/");
 
         }

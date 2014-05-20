@@ -62,3 +62,4 @@ $lang["meeting_point"] = "Desired Meeting Point";
 $lang["number_of_persons"] = "Number of persons";
 $lang["comment"] = "Any Comments?";
 
+$lang['tour_lang'] = "Chose language for this offer's description";

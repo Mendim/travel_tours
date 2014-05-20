@@ -45,9 +45,8 @@ class Trip_model extends CI_Model {
 		return empty($resArray) ? null : $resArray[0];
 	}
 
-	function findAll($first, $last) {
-        return $this->db->get(Trip_model::TABLE_NAME)->result();
-        //return $this->db->limit($first, $last)->get(Trip_model::TABLE_NAME)->result();
+	function findAll($first, $last, $lang) {
+        return $this->db->where('lang', $lang)->get(Trip_model::TABLE_NAME)->result();
 	}
 	
 	function deleteById($id) {
