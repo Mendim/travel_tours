@@ -32,11 +32,12 @@ class MY_Controller extends CI_Controller {
 
     public function setLang() {
         $selectedLang = $this->input->get('language');
-        if(isset($selectedLang))        
+        $redirect_to = $this->input->get('redirect_to');
+        if(isset($selectedLang))
         {
             $this->session->set_userdata("language", $selectedLang);
         }
-        redirect("home");
+        redirect($redirect_to);
     }
 
     protected function getLang() {
