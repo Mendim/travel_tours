@@ -80,7 +80,6 @@ class booking extends MY_Controller
         $this->form_validation->set_rules('number_of_persons', 'Number of Persons', 'required|integer|greater_than[0]');
 
         $trip =  $this->trip_model->findById($this->input->post('trip_id'));
-        var_dump($this->input->post('trip_id'));
 
         if ($this->form_validation->run() == FALSE) {
             // redirect
