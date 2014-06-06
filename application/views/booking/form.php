@@ -28,7 +28,7 @@
         <div class="control-group">
             <label class="control-label" for="start_date"><?php echo lang('start_date'); ?></label> (<i><?= lang('duration')?>: <?=$trip->duration ?></i>)
             <div class="input-group date form_datetime col-md-5" data-date="<?= $tomorrow?>" data-date-format="yyyy-MM-dd HH:ii:ss" data-link-field="start_date">
-                <input class="form-control" size="16" type="text" value="" readonly>
+                <input class="form-control" size="16" type="text" value="<?php echo set_value('start_date', $booking->start_date); ?>" readonly>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
             </div>
@@ -39,7 +39,7 @@
          <div class="control-group">
              <label class="control-label" for="meeting_point"><?php echo lang('meeting_point'); ?></label>
              <div class="controls">
-                 <input type="hidden" id="trip_id" name="trip_id" value="<?= $booking->trip_id ?>">
+                 <input type="hidden" id="trip_id" name="trip_id" value="<?= $trip->id ?>">
                  <input class="form-control" type="text" id="meeting_point" name="meeting_point" placeholder="<?php echo lang('meeting_point'); ?>" value="<?php echo set_value('meeting_point', $booking->meeting_point); ?>">
              </div>
          </div>

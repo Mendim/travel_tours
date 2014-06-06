@@ -79,12 +79,17 @@ class booking extends MY_Controller
         $this->form_validation->set_rules('meeting_point', 'Meeting Point', 'required');
         $this->form_validation->set_rules('number_of_persons', 'Number of Persons', 'required|integer|greater_than[0]');
 
+        $trip =  $this->trip_model->findById($this->input->post('trip_id'));
+        var_dump($this->input->post('trip_id'));
+
         if ($this->form_validation->run() == FALSE) {
             // redirect
             $this->setData('register_has_error', TRUE);
+            $this->setData('trip', $trip );
+            $this->setData("tomorrow",date('Y-m-d H:i:s', mktime(0, 0, 9, date("m")  , date("d")+1, date("Y"))));
             $this->loadView("booking/form");
         } else {
-            $trip =  $this->trip_model->findById($this->input->post('trip_id'));
+
             $start_date = strtotime($this->input->post('start_date')) ;
             $end_date = $start_date + $trip->duration*24*60*60;
 
